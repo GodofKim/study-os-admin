@@ -1,0 +1,23 @@
+.placementWrapper {
+  position: absolute;
+  display: flex;
+  position: fixed;
+  pointer-events: none;
+  touch-action: none;
+  z-index: var(--z-index-snackbar);
+}
+
+.placementWrapper.top-center {
+  top: 60px;
+  left: 50%;
+}
+
+.placementWrapper.bottom-center {
+  bottom: 12px;
+  left: 50%;
+}
+
+.placementWrapper.bottom-right {
+  bottom: 60px;
+  right: 24px;
+}

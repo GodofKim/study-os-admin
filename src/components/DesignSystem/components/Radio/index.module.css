@@ -1,0 +1,77 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.wrapper:hover {
+  background-color: var(--Neutral-Colors-Overlay-Hover);
+}
+
+.wrapper:active {
+  background-color: var(--Neutral-Colors-Overlay-Pressed);
+}
+
+.wrapperNoLabel {
+  border-radius: 20px;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputWrapperMd {
+  width: 40px;
+  height: 40px;
+}
+
+.inputWrapperSm {
+  width: 36px;
+  height: 36px;
+}
+
+.input {
+  appearance: none;
+  border: 1.5px solid var(--Neutral-Colors-Stroke-Active);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.input:checked {
+  border: 6px solid var(--Neutral-Colors-Stroke-Selected);
+}
+
+.inputDisabled {
+  cursor: not-allowed;
+  border: 1.5px solid var(--Neutral-Colors-Stroke-Active);
+  opacity: 0.5;
+}
+
+.inputMd {
+  width: 24px;
+  height: 24px;
+}
+
+.inputSm {
+  width: 20px;
+  height: 20px;
+}
+
+.label {
+  vertical-align: middle;
+  margin-top: 2px;
+  margin-right: 8px;
+}
+
+.labelDisabled {
+  color: var(--Neutral-Colors-Foreground-Disabled) !important;
+}
+
+.disabled {
+  color: var(--Neutral-Colors-Foreground-Disabled);
+  cursor: not-allowed;
+  pointer-events: none;
+}

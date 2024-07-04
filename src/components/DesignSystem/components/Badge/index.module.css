@@ -1,0 +1,19 @@
+.wrapper {
+  border-radius: 50px;
+  background: var(--Interface-Colors-Orange-50);
+  color: #fff !important;
+}
+
+.M {
+  height: 16px;
+}
+
+.S {
+  width: 8px;
+  height: 8px;
+}
+
+.XS {
+  width: 6px;
+  height: 6px;
+}

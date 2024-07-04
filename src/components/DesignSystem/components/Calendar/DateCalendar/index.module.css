@@ -1,0 +1,261 @@
+.calendarHeader {
+  height: 40px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendarHeaderControl {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--Neutral-Colors-Foreground-Primary);
+  cursor: pointer;
+}
+
+.calendarHeaderLevel {
+  composes: typo-headline-strong from global;
+
+  padding: 0 8px;
+  border: none;
+  background: transparent;
+  border-radius: 4px;
+  color: var(--Neutral-Colors-Foreground-Primary);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--Neutral-Colors-Overlay-Hover);
+  }
+
+  &:focus {
+    background-color: var(--Neutral-Colors-Overlay-Pressed);
+  }
+
+  &:disabled {
+    cursor: default;
+    pointer-events: none;
+    color: var(--Neutral-Colors-Foreground-Disabled);
+  }
+}
+
+.levelsGroup {
+  width: 280px;
+}
+
+.yearsList {
+  border-spacing: 0;
+  width: 100%;
+}
+
+.yearsListCell {
+  padding: 0 6px;
+}
+
+.yearsListControl {
+  composes: typo-subheadline-strong from global;
+
+  width: 80px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--Neutral-Colors-Stroke-Selected);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--Neutral-Colors-Overlay-Hover);
+  }
+
+  &:focus {
+    background-color: var(--Neutral-Colors-Overlay-Pressed);
+  }
+
+  &:disabled {
+    cursor: default;
+    pointer-events: none;
+    color: var(--Neutral-Colors-Foreground-Disabled);
+  }
+}
+
+.monthsList {
+  border-spacing: 0;
+  width: 100%;
+}
+
+.monthsListCell {
+  padding: 0 6px;
+}
+
+.monthsListControl {
+  composes: typo-subheadline-strong from global;
+
+  width: 80px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--Neutral-Colors-Stroke-Selected);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--Neutral-Colors-Overlay-Hover);
+  }
+
+  &:focus {
+    background-color: var(--Neutral-Colors-Overlay-Pressed);
+  }
+
+  &:disabled {
+    cursor: default;
+    pointer-events: none;
+    color: var(--Neutral-Colors-Foreground-Disabled);
+  }
+
+  border: none;
+  background: transparent;
+  color: var(--Neutral-Colors-Foreground-Primary);
+}
+
+.monthThead {
+  composes: typo-caption-1-strong from global;
+
+  .weekday {
+    padding-bottom: 8px;
+    color: var(--Neutral-Colors-Foreground-Primary);
+
+    &:nth-child(1),
+    &:nth-child(7) {
+      color: var(--Neutral-Colors-Foreground-Tertiary);
+    }
+  }
+}
+
+.monthCell {
+  width: 40px;
+  height: 40px;
+  padding: 4px 0;
+}
+
+.month {
+  border-spacing: 0;
+}
+
+.day {
+  composes: typo-subheadline-strong from global;
+
+  width: 40px;
+  height: 32px;
+  position: relative;
+  z-index: 101;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: var(--Neutral-Colors-Foreground-Primary);
+  background: transparent;
+  cursor: pointer;
+
+  &[data-weekend] {
+    color: var(--Interface-Colors-Red-60);
+  }
+
+  &[data-outside] {
+    color: var(--Neutral-Colors-Foreground-Disabled);
+  }
+
+  &[data-in-range] {
+    color: var(--Neutral-Colors-Foreground-Primary);
+    background: var(--Key-Colors-Background2);
+  }
+
+  &[data-selected],
+  &[data-first-in-range],
+  &[data-last-in-range] {
+    z-index: 102;
+    color: var(--Neutral-Colors-Background-Card);
+    background: transparent;
+  }
+
+  &[data-first-in-range]::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    width: 20px;
+    height: 32px;
+    background: var(--Key-Colors-Background2);
+  }
+
+  &[data-last-in-range]::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    width: 20px;
+    height: 32px;
+    background: var(--Key-Colors-Background2);
+  }
+
+  &[data-first-in-range]::after,
+  &[data-last-in-range]::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid var(--Key-Colors-Background2);
+    background: var(--Key-Colors-Foreground2);
+  }
+
+  &[data-selected]::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--Key-Colors-Foreground2);
+  }
+}
+
+.day:hover:not([data-selected]):not([data-in-range])::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--Neutral-Colors-Overlay-Hover);
+}
+
+.calendarControls {
+  margin-top: 24px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendarControls button {
+  padding: 0;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 600;
+  color: var(--Neutral-Colors-Foreground-Primary);
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}

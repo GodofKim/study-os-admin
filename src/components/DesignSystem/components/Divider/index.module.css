@@ -1,0 +1,16 @@
+.wrapper {
+  background-color: var(--Neutral-Colors-Stroke-Inactive);
+}
+
+.size1 {
+  height: 1px;
+}
+
+.size4 {
+  height: 4px;
+}
+
+.size12 {
+  height: 12px;
+  background-color: var(--Neutral-Colors-Background-Canvas);
+}

@@ -1,0 +1,549 @@
+:root {
+  --BrandColor-QANDA-Orange: #ff5500;
+  --Interface-Colors-Orange-10: #3a2c24;
+  --Interface-Colors-Orange-20: #6e5344;
+  --Interface-Colors-Orange-50: #ed5000;
+  --Interface-Colors-Orange-60: #fa6616;
+  --Interface-Colors-Orange-90: #fbdccc;
+  --Interface-Colors-Orange-100: #fef1eb;
+  --Interface-Colors-Red-10: #372324;
+  --Interface-Colors-Red-20: #6b4446;
+  --Interface-Colors-Red-50: #fb2d36;
+  --Interface-Colors-Red-60: #fa4f57;
+  --Interface-Colors-Red-80: #ffb6b1;
+  --Interface-Colors-Red-90: #fed5d7;
+  --Interface-Colors-Red-100: #ffeeef;
+  --Interface-Colors-Blue-10: #202c35;
+  --Interface-Colors-Blue-20: #3f5769;
+  --Interface-Colors-Blue-50: #0785f2;
+  --Interface-Colors-Blue-60: #1198ff;
+  --Interface-Colors-Blue-90: #cde7fc;
+  --Interface-Colors-Blue-100: #ecf6ff;
+  --Interface-Colors-Green-10: #20312d;
+  --Interface-Colors-Green-20: #41635b;
+  --Interface-Colors-Green-50: #0d9974;
+  --Interface-Colors-Green-60: #00a87c;
+  --Interface-Colors-Green-90: #cfebe3;
+  --Interface-Colors-Green-100: #ecf7f4;
+  --Interface-Colors-Purple-10: #281f3f;
+  --Interface-Colors-Purple-20: #493873;
+  --Interface-Colors-Purple-50: #7e53e3;
+  --Interface-Colors-Purple-60: #9b71ff;
+  --Interface-Colors-Purple-90: #e5ddf9;
+  --Interface-Colors-Purple-100: #f5f0fc;
+  --Interface-Colors-Yellow-10: #322f1b;
+  --Interface-Colors-Yellow-20: #666037;
+  --Interface-Colors-Yellow-50: #ffcc00;
+  --Interface-Colors-Yellow-60: #f0cf29;
+  --Interface-Colors-Yellow-90: #fff5cc;
+  --Interface-Colors-Yellow-100: #fffbeb;
+  --Neutral-Colors-Neutral-0: #121212;
+  --Neutral-Colors-Neutral-10: #222222;
+  --Neutral-Colors-Neutral-20: #3d3d3d;
+  --Neutral-Colors-Neutral-30: #5d5d5d;
+  --Neutral-Colors-Neutral-40: #7a7a7a;
+  --Neutral-Colors-Neutral-50: #999999;
+  --Neutral-Colors-Neutral-60: #b5b5b5;
+  --Neutral-Colors-Neutral-70: #d0d0d0;
+  --Neutral-Colors-Neutral-80: #f0f0f0;
+  --Neutral-Colors-Neutral-90: #f9f9f9;
+  --Neutral-Colors-Neutral-100: #ffffff;
+  --Neutral-Colors-Background-Canvas: var(--Neutral-Colors-Neutral-90);
+  --Neutral-Colors-Background-Card: var(--Neutral-Colors-Neutral-100);
+  --Neutral-Colors-Background-Negative-Transparent: rgba(251, 45, 54, 0.9);
+  --Neutral-Colors-Background-Selectable1: var(--Neutral-Colors-Neutral-20);
+  --Neutral-Colors-Background-Selectable2: var(--Neutral-Colors-Neutral-80);
+  --Neutral-Colors-Background-Selectable3: var(--Neutral-Colors-Neutral-90);
+  --Neutral-Colors-Background-Transparent-Spinner: rgba(34, 34, 34, 0.1);
+  --Neutral-Colors-Background-Transparent: rgba(34, 34, 34, 0.9);
+  --Neutral-Colors-Foreground-Disabled: var(--Neutral-Colors-Neutral-60);
+  --Neutral-Colors-Foreground-on-Accent-Color: var(--Neutral-Colors-Neutral-90);
+  --Neutral-Colors-Foreground-on-Neutral-Color: var(
+    --Neutral-Colors-Neutral-90
+  );
+  --Neutral-Colors-Foreground-Primary: var(--Neutral-Colors-Neutral-10);
+  --Neutral-Colors-Foreground-Secondary: var(--Neutral-Colors-Neutral-30);
+  --Neutral-Colors-Foreground-Tertiary: var(--Neutral-Colors-Neutral-50);
+  --Neutral-Colors-Overlay-Dimmed: rgba(0, 0, 0, 0.5);
+  --Neutral-Colors-Overlay-Disabled: rgba(255, 255, 255, 0.5);
+  --Neutral-Colors-Overlay-Hover: rgba(0, 0, 0, 0.03);
+  --Neutral-Colors-Overlay-Pressed: rgba(0, 0, 0, 0.1);
+  --Neutral-Colors-Stroke-Active: var(--Neutral-Colors-Neutral-70);
+  --Neutral-Colors-Stroke-Inactive: var(--Neutral-Colors-Neutral-80);
+  --Neutral-Colors-Stroke-Selected: var(--Neutral-Colors-Neutral-20);
+  --Key-Colors-Background1: var(--Interface-Colors-Orange-50);
+  --Key-Colors-Background2: var(--Interface-Colors-Orange-100);
+  --Key-Colors-Foreground1: var(--Interface-Colors-Orange-100);
+  --Key-Colors-Foreground2: var(--Interface-Colors-Orange-50);
+  --Key-Colors-on-Neutral-Color: var(--Interface-Colors-Orange-60);
+  --Key-Colors-Overlay-Hover: rgba(237, 80, 0, 0.1);
+  --Key-Colors-Overlay-Pressed: rgba(237, 80, 0, 0.3);
+  --Key-Colors-Stroke1: var(--Interface-Colors-Orange-50);
+  --Key-Colors-Stroke2: var(--Interface-Colors-Orange-90);
+  --Accent-Colors-Informative-Background1: var(--Interface-Colors-Purple-50);
+  --Accent-Colors-Informative-Background2: var(--Interface-Colors-Purple-100);
+  --Accent-Colors-Informative-Foreground1: var(--Interface-Colors-Purple-100);
+  --Accent-Colors-Informative-Foreground2: var(--Interface-Colors-Purple-50);
+  --Accent-Colors-Informative-Stroke1: var(--Interface-Colors-Purple-50);
+  --Accent-Colors-Informative-Stroke2: var(--Interface-Colors-Purple-90);
+  --Accent-Colors-Interactive-Background1: var(--Interface-Colors-Blue-50);
+  --Accent-Colors-Interactive-Background2: var(--Interface-Colors-Blue-100);
+  --Accent-Colors-Interactive-Foreground1: var(--Interface-Colors-Blue-100);
+  --Accent-Colors-Interactive-Foreground2: var(--Interface-Colors-Blue-50);
+  --Accent-Colors-Interactive-Stroke1: var(--Interface-Colors-Blue-50);
+  --Accent-Colors-Interactive-Stroke2: var(--Interface-Colors-Blue-90);
+  --Accent-Colors-Negative-Background1: var(--Interface-Colors-Red-50);
+  --Accent-Colors-Negative-Background2: var(--Interface-Colors-Red-100);
+  --Accent-Colors-Negative-Foreground1: var(--Interface-Colors-Red-100);
+  --Accent-Colors-Negative-Foreground2: var(--Interface-Colors-Red-50);
+  --Accent-Colors-Negative-Stroke1: var(--Interface-Colors-Red-50);
+  --Accent-Colors-Negative-Stroke2: var(--Interface-Colors-Red-90);
+  --Accent-Colors-Notice-Background1: var(--Interface-Colors-Yellow-50);
+  --Accent-Colors-Notice-Background2: var(--Interface-Colors-Yellow-100);
+  --Accent-Colors-Notice-Foreground1: var(--Interface-Colors-Yellow-10);
+  --Accent-Colors-Notice-Foreground2: var(--Interface-Colors-Yellow-20);
+  --Accent-Colors-Notice-Stroke1: var(--Interface-Colors-Yellow-50);
+  --Accent-Colors-Notice-Stroke2: var(--Interface-Colors-Yellow-90);
+  --Accent-Colors-Success-Background1: var(--Interface-Colors-Green-50);
+  --Accent-Colors-Success-Background2: var(--Interface-Colors-Green-100);
+  --Accent-Colors-Success-Foreground1: var(--Interface-Colors-Green-100);
+  --Accent-Colors-Success-Foreground2: var(--Interface-Colors-Green-50);
+  --Accent-Colors-Success-Stroke1: var(--Interface-Colors-Green-50);
+  --Accent-Colors-Success-Stroke2: var(--Interface-Colors-Green-90);
+}
+
+.--BrandColor-QANDA-Orange {
+  color: var(--BrandColor-QANDA-Orange);
+}
+
+.--Interface-Colors-Orange-10 {
+  color: var(--Interface-Colors-Orange-10);
+}
+
+.--Interface-Colors-Orange-20 {
+  color: var(--Interface-Colors-Orange-20);
+}
+
+.--Interface-Colors-Orange-50 {
+  color: var(--Interface-Colors-Orange-50);
+}
+
+.--Interface-Colors-Orange-60 {
+  color: var(--Interface-Colors-Orange-60);
+}
+
+.--Interface-Colors-Orange-90 {
+  color: var(--Interface-Colors-Orange-90);
+}
+
+.--Interface-Colors-Orange-100 {
+  color: var(--Interface-Colors-Orange-100);
+}
+
+.--Interface-Colors-Red-10 {
+  color: var(--Interface-Colors-Red-10);
+}
+
+.--Interface-Colors-Red-20 {
+  color: var(--Interface-Colors-Red-20);
+}
+
+.--Interface-Colors-Red-50 {
+  color: var(--Interface-Colors-Red-50);
+}
+
+.--Interface-Colors-Red-60 {
+  color: var(--Interface-Colors-Red-60);
+}
+
+.--Interface-Colors-Red-80 {
+  color: var(--Interface-Colors-Red-80);
+}
+
+.--Interface-Colors-Red-90 {
+  color: var(--Interface-Colors-Red-90);
+}
+
+.--Interface-Colors-Red-100 {
+  color: var(--Interface-Colors-Red-100);
+}
+
+.--Interface-Colors-Blue-10 {
+  color: var(--Interface-Colors-Blue-10);
+}
+
+.--Interface-Colors-Blue-20 {
+  color: var(--Interface-Colors-Blue-20);
+}
+
+.--Interface-Colors-Blue-50 {
+  color: var(--Interface-Colors-Blue-50);
+}
+
+.--Interface-Colors-Blue-60 {
+  color: var(--Interface-Colors-Blue-60);
+}
+
+.--Interface-Colors-Blue-90 {
+  color: var(--Interface-Colors-Blue-90);
+}
+
+.--Interface-Colors-Blue-100 {
+  color: var(--Interface-Colors-Blue-100);
+}
+
+.--Interface-Colors-Green-10 {
+  color: var(--Interface-Colors-Green-10);
+}
+
+.--Interface-Colors-Green-20 {
+  color: var(--Interface-Colors-Green-20);
+}
+
+.--Interface-Colors-Green-50 {
+  color: var(--Interface-Colors-Green-50);
+}
+
+.--Interface-Colors-Green-60 {
+  color: var(--Interface-Colors-Green-60);
+}
+
+.--Interface-Colors-Green-90 {
+  color: var(--Interface-Colors-Green-90);
+}
+
+.--Interface-Colors-Green-100 {
+  color: var(--Interface-Colors-Green-100);
+}
+
+.--Interface-Colors-Purple-10 {
+  color: var(--Interface-Colors-Purple-10);
+}
+
+.--Interface-Colors-Purple-20 {
+  color: var(--Interface-Colors-Purple-20);
+}
+
+.--Interface-Colors-Purple-50 {
+  color: var(--Interface-Colors-Purple-50);
+}
+
+.--Interface-Colors-Purple-60 {
+  color: var(--Interface-Colors-Purple-60);
+}
+
+.--Interface-Colors-Purple-90 {
+  color: var(--Interface-Colors-Purple-90);
+}
+
+.--Interface-Colors-Purple-100 {
+  color: var(--Interface-Colors-Purple-100);
+}
+
+.--Interface-Colors-Yellow-10 {
+  color: var(--Interface-Colors-Yellow-10);
+}
+
+.--Interface-Colors-Yellow-20 {
+  color: var(--Interface-Colors-Yellow-20);
+}
+
+.--Interface-Colors-Yellow-50 {
+  color: var(--Interface-Colors-Yellow-50);
+}
+
+.--Interface-Colors-Yellow-60 {
+  color: var(--Interface-Colors-Yellow-60);
+}
+
+.--Interface-Colors-Yellow-90 {
+  color: var(--Interface-Colors-Yellow-90);
+}
+
+.--Interface-Colors-Yellow-100 {
+  color: var(--Interface-Colors-Yellow-100);
+}
+
+.--Neutral-Colors-Neutral-0 {
+  color: var(--Neutral-Colors-Neutral-0);
+}
+
+.--Neutral-Colors-Neutral-10 {
+  color: var(--Neutral-Colors-Neutral-10);
+}
+
+.--Neutral-Colors-Neutral-20 {
+  color: var(--Neutral-Colors-Neutral-20);
+}
+
+.--Neutral-Colors-Neutral-30 {
+  color: var(--Neutral-Colors-Neutral-30);
+}
+
+.--Neutral-Colors-Neutral-40 {
+  color: var(--Neutral-Colors-Neutral-40);
+}
+
+.--Neutral-Colors-Neutral-50 {
+  color: var(--Neutral-Colors-Neutral-50);
+}
+
+.--Neutral-Colors-Neutral-60 {
+  color: var(--Neutral-Colors-Neutral-60);
+}
+
+.--Neutral-Colors-Neutral-70 {
+  color: var(--Neutral-Colors-Neutral-70);
+}
+
+.--Neutral-Colors-Neutral-80 {
+  color: var(--Neutral-Colors-Neutral-80);
+}
+
+.--Neutral-Colors-Neutral-90 {
+  color: var(--Neutral-Colors-Neutral-90);
+}
+
+.--Neutral-Colors-Neutral-100 {
+  color: var(--Neutral-Colors-Neutral-100);
+}
+
+.--Neutral-Colors-Background-Canvas {
+  color: var(--Neutral-Colors-Background-Canvas);
+}
+
+.--Neutral-Colors-Background-Card {
+  color: var(--Neutral-Colors-Background-Card);
+}
+
+.--Neutral-Colors-Background-Negative-Transparent {
+  color: var(--Neutral-Colors-Background-Negative-Transparent);
+}
+
+.--Neutral-Colors-Background-Selectable1 {
+  color: var(--Neutral-Colors-Background-Selectable1);
+}
+
+.--Neutral-Colors-Background-Selectable2 {
+  color: var(--Neutral-Colors-Background-Selectable2);
+}
+
+.--Neutral-Colors-Background-Selectable3 {
+  color: var(--Neutral-Colors-Background-Selectable3);
+}
+
+.--Neutral-Colors-Background-Transparent-Spinner {
+  color: var(--Neutral-Colors-Background-Transparent-Spinner);
+}
+
+.--Neutral-Colors-Background-Transparent {
+  color: var(--Neutral-Colors-Background-Transparent);
+}
+
+.--Neutral-Colors-Foreground-Disabled {
+  color: var(--Neutral-Colors-Foreground-Disabled);
+}
+
+.--Neutral-Colors-Foreground-on-Accent-Color {
+  color: var(--Neutral-Colors-Foreground-on-Accent-Color);
+}
+
+.--Neutral-Colors-Foreground-on-Neutral-Color {
+  color: var(--Neutral-Colors-Foreground-on-Neutral-Color);
+}
+
+.--Neutral-Colors-Foreground-Primary {
+  color: var(--Neutral-Colors-Foreground-Primary);
+}
+
+.--Neutral-Colors-Foreground-Secondary {
+  color: var(--Neutral-Colors-Foreground-Secondary);
+}
+
+.--Neutral-Colors-Foreground-Tertiary {
+  color: var(--Neutral-Colors-Foreground-Tertiary);
+}
+
+.--Neutral-Colors-Overlay-Dimmed {
+  color: var(--Neutral-Colors-Overlay-Dimmed);
+}
+
+.--Neutral-Colors-Overlay-Disabled {
+  color: var(--Neutral-Colors-Overlay-Disabled);
+}
+
+.--Neutral-Colors-Overlay-Hover {
+  color: var(--Neutral-Colors-Overlay-Hover);
+}
+
+.--Neutral-Colors-Overlay-Pressed {
+  color: var(--Neutral-Colors-Overlay-Pressed);
+}
+
+.--Neutral-Colors-Stroke-Active {
+  color: var(--Neutral-Colors-Stroke-Active);
+}
+
+.--Neutral-Colors-Stroke-Inactive {
+  color: var(--Neutral-Colors-Stroke-Inactive);
+}
+
+.--Neutral-Colors-Stroke-Selected {
+  color: var(--Neutral-Colors-Stroke-Selected);
+}
+
+.--Key-Colors-Background1 {
+  color: var(--Key-Colors-Background1);
+}
+
+.--Key-Colors-Background2 {
+  color: var(--Key-Colors-Background2);
+}
+
+.--Key-Colors-Foreground1 {
+  color: var(--Key-Colors-Foreground1);
+}
+
+.--Key-Colors-Foreground2 {
+  color: var(--Key-Colors-Foreground2);
+}
+
+.--Key-Colors-on-Neutral-Color {
+  color: var(--Key-Colors-on-Neutral-Color);
+}
+
+.--Key-Colors-Overlay-Hover {
+  color: var(--Key-Colors-Overlay-Hover);
+}
+
+.--Key-Colors-Overlay-Pressed {
+  color: var(--Key-Colors-Overlay-Pressed);
+}
+
+.--Key-Colors-Stroke1 {
+  color: var(--Key-Colors-Stroke1);
+}
+
+.--Key-Colors-Stroke2 {
+  color: var(--Key-Colors-Stroke2);
+}
+
+.--Accent-Colors-Informative-Background1 {
+  color: var(--Accent-Colors-Informative-Background1);
+}
+
+.--Accent-Colors-Informative-Background2 {
+  color: var(--Accent-Colors-Informative-Background2);
+}
+
+.--Accent-Colors-Informative-Foreground1 {
+  color: var(--Accent-Colors-Informative-Foreground1);
+}
+
+.--Accent-Colors-Informative-Foreground2 {
+  color: var(--Accent-Colors-Informative-Foreground2);
+}
+
+.--Accent-Colors-Informative-Stroke1 {
+  color: var(--Accent-Colors-Informative-Stroke1);
+}
+
+.--Accent-Colors-Informative-Stroke2 {
+  color: var(--Accent-Colors-Informative-Stroke2);
+}
+
+.--Accent-Colors-Interactive-Background1 {
+  color: var(--Accent-Colors-Interactive-Background1);
+}
+
+.--Accent-Colors-Interactive-Background2 {
+  color: var(--Accent-Colors-Interactive-Background2);
+}
+
+.--Accent-Colors-Interactive-Foreground1 {
+  color: var(--Accent-Colors-Interactive-Foreground1);
+}
+
+.--Accent-Colors-Interactive-Foreground2 {
+  color: var(--Accent-Colors-Interactive-Foreground2);
+}
+
+.--Accent-Colors-Interactive-Stroke1 {
+  color: var(--Accent-Colors-Interactive-Stroke1);
+}
+
+.--Accent-Colors-Interactive-Stroke2 {
+  color: var(--Accent-Colors-Interactive-Stroke2);
+}
+
+.--Accent-Colors-Negative-Background1 {
+  color: var(--Accent-Colors-Negative-Background1);
+}
+
+.--Accent-Colors-Negative-Background2 {
+  color: var(--Accent-Colors-Negative-Background2);
+}
+
+.--Accent-Colors-Negative-Foreground1 {
+  color: var(--Accent-Colors-Negative-Foreground1);
+}
+
+.--Accent-Colors-Negative-Foreground2 {
+  color: var(--Accent-Colors-Negative-Foreground2);
+}
+
+.--Accent-Colors-Negative-Stroke1 {
+  color: var(--Accent-Colors-Negative-Stroke1);
+}
+
+.--Accent-Colors-Negative-Stroke2 {
+  color: var(--Accent-Colors-Negative-Stroke2);
+}
+
+.--Accent-Colors-Notice-Background1 {
+  color: var(--Accent-Colors-Notice-Background1);
+}
+
+.--Accent-Colors-Notice-Background2 {
+  color: var(--Accent-Colors-Notice-Background2);
+}
+
+.--Accent-Colors-Notice-Foreground1 {
+  color: var(--Accent-Colors-Notice-Foreground1);
+}
+
+.--Accent-Colors-Notice-Foreground2 {
+  color: var(--Accent-Colors-Notice-Foreground2);
+}
+
+.--Accent-Colors-Notice-Stroke1 {
+  color: var(--Accent-Colors-Notice-Stroke1);
+}
+
+.--Accent-Colors-Notice-Stroke2 {
+  color: var(--Accent-Colors-Notice-Stroke2);
+}
+
+.--Accent-Colors-Success-Background1 {
+  color: var(--Accent-Colors-Success-Background1);
+}
+
+.--Accent-Colors-Success-Background2 {
+  color: var(--Accent-Colors-Success-Background2);
+}
+
+.--Accent-Colors-Success-Foreground1 {
+  color: var(--Accent-Colors-Success-Foreground1);
+}
+
+.--Accent-Colors-Success-Foreground2 {
+  color: var(--Accent-Colors-Success-Foreground2);
+}
+
+.--Accent-Colors-Success-Stroke1 {
+  color: var(--Accent-Colors-Success-Stroke1);
+}
+
+.--Accent-Colors-Success-Stroke2 {
+  color: var(--Accent-Colors-Success-Stroke2);
+}

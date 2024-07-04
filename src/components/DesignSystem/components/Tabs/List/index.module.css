@@ -1,0 +1,43 @@
+.scrollWrapper {
+  width: 100%;
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.tabsList {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.Small {
+  composes: typo-subheadline-strong from global;
+
+  height: 44px;
+}
+
+.Medium {
+  composes: typo-body-strong from global;
+
+  height: 50px;
+}
+
+.Fixed {
+  width: 100%;
+  justify-content: space-between;
+
+  & > * {
+    flex: 1;
+  }
+}
+
+.Scrollable {
+  width: fit-content;
+  justify-content: flex-start;
+}

@@ -1,0 +1,17 @@
+export type AlignItems =
+  | "stretch"
+  | "flex-start"
+  | "flex-end"
+  | "center"
+  | "baseline"
+  | "first baseline"
+  | "last baseline"
+  | "start"
+  | "end"
+  | "self-start"
+  | "self-end"
+  | "safe center"
+  | "unsafe center"
+  | "inherit"
+  | "initial"
+  | "unset";

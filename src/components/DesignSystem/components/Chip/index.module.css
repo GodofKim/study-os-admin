@@ -1,0 +1,143 @@
+.chipWrapper {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  border: 1px solid var(--Neutral-Colors-Stroke-Active);
+  background: var(--Neutral-Colors-Background-Card);
+  color: var(--Neutral-Colors-Foreground-Primary);
+  cursor: pointer;
+}
+
+.S {
+  height: 32px;
+  border-radius: 16px;
+  padding: 0 6px;
+}
+
+.M {
+  height: 40px;
+  border-radius: 20px;
+  padding: 0 8px;
+}
+
+.chipWrapper:hover {
+  border: 1px solid var(--Neutral-Colors-Stroke-Active);
+  background: var(--Neutral-Colors-Overlay-Hover);
+}
+
+.chipWrapper:active {
+  border: 1px solid var(--Neutral-Colors-Stroke-Active);
+  background: var(--Neutral-Colors-Overlay-Pressed);
+}
+
+.selected {
+  border: 1px solid var(--Neutral-Colors-Stroke-Selected, #3d3d3d);
+  background: var(--Neutral-Colors-Background-Selectable1, #3d3d3d);
+  color: var(--Neutral-Colors-Foreground-on-Neutral-Color, #f9f9f9);
+
+  &:hover {
+    border: 1px solid var(--Neutral-Colors-Foreground-Secondary, #5d5d5d);
+    background: var(--Neutral-Colors-Foreground-Secondary, #5d5d5d);
+  }
+
+  &:active {
+    border-radius: 40px;
+    border: 1px solid var(--Neutral-Colors-Stroke-Selected, #3d3d3d);
+    background: var(--Neutral-Colors-Background-Selectable1, #3d3d3d);
+  }
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.selected.disabled {
+  border: 1px solid var(--Neutral-Colors-Background-Selectable1, #3d3d3d);
+  background: var(--Neutral-Colors-Background-Selectable1, #3d3d3d);
+}
+
+.disabled::after {
+  content: "";
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  left: -1px;
+  top: -1px;
+  bottom: -1px;
+  right: -1px;
+  position: absolute;
+  background-color: var(--Neutral-Colors-Overlay-Disabled);
+}
+
+.S.disabled::after {
+  border-radius: 16px;
+}
+
+.M.disabled::after {
+  border-radius: 20px;
+}
+
+.chipBody {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+}
+
+.S .chipBody {
+  padding: 6px;
+}
+
+.M .chipBody {
+  padding: 8px;
+}
+
+.chipIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: unset;
+
+  svg {
+    width: inherit;
+    height: inherit;
+  }
+}
+
+.S .chipIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.M .chipIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.chipLabelS {
+  composes: typo-subheadline from global;
+}
+
+.chipLabelM {
+  composes: typo-body from global;
+}
+
+.closeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: unset;
+}
+
+.S .closeButton {
+  padding: 6px;
+}
+
+.M .closeButton {
+  padding: 8px;
+}

@@ -1,0 +1,68 @@
+.wrapper {
+  padding: 0 16px;
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}
+
+.wrapperWithAside {
+  padding-right: 8px;
+}
+
+/* --- <input /> 영역 --- */
+
+.textInput {
+  flex: 1;
+  border: none;
+  width: 100%;
+  outline: none;
+  background-color: transparent;
+  color: var(--Neutral-Colors-Foreground-Primary);
+}
+
+.textInputMd {
+  composes: typo-body from global;
+}
+
+.textInputSm {
+  composes: typo-subheadline from global;
+}
+
+.textInput:disabled {
+  color: var(--Neutral-Colors-Foreground-Disabled);
+}
+
+.textInput:read-only:not(:disabled) {
+  color: var(--Neutral-Colors-Foreground-Secondary);
+}
+
+.aside {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 4px;
+}
+
+.inputClearButton {
+  display: none;
+  flex: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  line-height: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.wrapper:focus-within .inputClearButton {
+  display: inline;
+}
+
+.inputClearButton path {
+  fill: var(--Neutral-Colors-Foreground-Tertiary);
+}

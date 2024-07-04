@@ -1,0 +1,78 @@
+.wrapper {
+  height: 40px;
+  padding: 0 16px;
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+/* --- 아이콘 영역 --- */
+
+.calendarIcon {
+  color: var(--Neutral-Colors-Foreground-Primary);
+}
+
+.wrapperDisabled .calendarIcon {
+  color: var(--Neutral-Colors-Foreground-Disabled);
+}
+
+/* --- <input /> 영역 --- */
+
+.dateRangeInput {
+  flex: 1;
+  height: 24px;
+  border: none;
+  width: 100%;
+  outline: none;
+  background-color: transparent;
+  color: var(--Neutral-Colors-Foreground-Primary);
+}
+
+.dateRangeInputMd {
+  composes: typo-body from global;
+}
+
+.dateRangeInputSm {
+  composes: typo-subheadline from global;
+}
+
+.dateRangeInput:disabled {
+  color: var(--Neutral-Colors-Foreground-Disabled);
+}
+
+/* --- 달력 영역 --- */
+
+.calendarBox {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  padding: 24px;
+  border-radius: 8px;
+  background-color: var(--Neutral-Colors-Background-Card);
+  border: 1px solid var(--Neutral-Colors-Stroke-Inactive);
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.12),
+    0px 0px 1px 0px rgba(0, 0, 0, 0.08);
+}
+
+.calendarBoxMd {
+  top: 56px;
+}
+
+.calendarBoxSm {
+  top: 48px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 99;
+  pointer-events: all;
+}

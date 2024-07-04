@@ -1,0 +1,95 @@
+.wrapper {
+  display: flex;
+  flex: 1;
+  flex-flow: column nowrap;
+  font-family: "Pretendard", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- 레이블 영역 --- */
+
+.labelBox {
+  composes: typo-subheadline-strong from global;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 4px;
+  min-height: 20px;
+  white-space: pre-wrap;
+  color: var(--Neutral-Colors-Foreground-Primary);
+}
+
+.labelBoxHidden {
+  visibility: hidden;
+  position: absolute;
+}
+
+.labelRequiredIndicator {
+  color: var(--Accent-Colors-Negative-Foreground2);
+}
+
+/* --- 박스 영역 --- */
+
+.inputBox {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 8px;
+  background-color: var(--Neutral-Colors-Background-Card);
+  box-shadow: inset 0 0 1px 1px var(--Neutral-Colors-Stroke-Active);
+}
+
+.inputBoxMd {
+  height: 48px;
+}
+
+.inputBoxSm {
+  height: 40px;
+}
+
+.inputBox:not(.inputBoxDisabled):not(.inputBoxReadOnly):not(
+    :focus-within
+  ):hover {
+  background-color: var(--Neutral-Colors-Overlay-Hover);
+}
+
+.inputBox:not(.inputBoxReadOnly):focus-within {
+  box-shadow: inset 0 0 1px 1px var(--Neutral-Colors-Stroke-Selected);
+}
+
+.inputBoxDisabled {
+  background-color: var(--Neutral-Colors-Stroke-Inactive);
+  box-shadow: inset 0 0 1px 1px var(--Neutral-Colors-Stroke-Inactive);
+}
+
+.inputBoxReadOnly {
+  background-color: var(--Neutral-Colors-Stroke-Inactive);
+  box-shadow: inset 0 0 1px 1px var(--Neutral-Colors-Stroke-Inactive);
+}
+
+.inputBoxErrored {
+  box-shadow: inset 0 0 1px 1px var(--Accent-Colors-Negative-Stroke1);
+}
+
+/* --- 메시지 영역 --- */
+
+.messageBox {
+  composes: typo-caption-1 from global;
+
+  margin-top: 8px;
+  color: var(--Neutral-Colors-Foreground-Tertiary);
+  text-align: left;
+}
+
+.messageBoxErrored {
+  color: var(--Accent-Colors-Negative-Foreground2);
+}
+
+.messageBoxIcon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+}

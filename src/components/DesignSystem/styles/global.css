@@ -1,0 +1,12 @@
+/* import fonts */
+@import url("https://assets.qanda.ai/common-assets/fonts/pretendard/pretendard-kr.css");
+@import url("https://assets.qanda.ai/common-assets/fonts/pretendard/pretendard-jp.css");
+@import url("https://assets.qanda.ai/common-assets/fonts/pretendard/pretendard-std.css");
+
+* {
+  box-sizing: border-box;
+}
+
+.qds3__text {
+  color: var(--Neutral-Colors-Neutral-10);
+}

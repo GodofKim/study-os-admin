@@ -1,0 +1,48 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.textContainer {
+  flex: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.clearMargin {
+  position: absolute;
+  width: inherit;
+  height: 4px;
+  bottom: 0;
+  margin-bottom: -4px;
+}
+
+.inspectorAnchor {
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  z-index: 100;
+}
+
+.inspector {
+  composes: typo-caption-1 from global;
+
+  width: max-content;
+  max-width: 360px;
+  margin-top: 4px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: var(--Neutral-Colors-Background-Card);
+  background: var(--Neutral-Colors-Background-Transparent);
+  visibility: hidden;
+  text-align: left;
+}
+
+.overflowing:hover .inspector {
+  visibility: visible;
+}

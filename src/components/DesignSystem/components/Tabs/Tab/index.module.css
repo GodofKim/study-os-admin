@@ -1,0 +1,73 @@
+.tab {
+  padding: 0 8px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  border: none;
+  border-radius: 8px;
+  background-color: transparent;
+  font-size: unset;
+  font-weight: unset;
+  line-height: unset;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.tab:hover {
+  background-color: var(--Neutral-Colors-Overlay-Hover);
+}
+
+.tab:active {
+  background-color: var(--Neutral-Colors-Overlay-Pressed);
+}
+
+.withIndicator {
+  color: var(--Neutral-Colors-Foreground-Primary, #222);
+}
+
+.withoutIndicator {
+  color: var(--Neutral-Colors-Foreground-Tertiary);
+}
+
+.activeTab {
+  color: var(--Neutral-Colors-Foreground-Primary, #222);
+}
+
+.tabContent {
+  min-width: 44px;
+  position: relative;
+  padding: 0 4px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  overflow: hidden;
+}
+
+.icon {
+  flex: none;
+  width: 16px;
+  height: 16px;
+}
+
+.iconOnly {
+  width: 20px;
+  height: 20px;
+}
+
+.label {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.activeIndicator {
+  position: absolute;
+  bottom: -2px;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: var(--Neutral-Colors-Foreground-Primary, #222);
+}

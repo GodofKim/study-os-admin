@@ -1,0 +1,43 @@
+.wrapper {
+  background: none;
+  border: none;
+  border-radius: 100px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.wrapper:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.wrapper:active {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.M {
+  width: 40px;
+  height: 40px;
+
+  font-size: 24px;
+}
+
+.S {
+  width: 32px;
+  height: 32px;
+
+  font-size: 16px;
+}
+
+.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+
+  color: var(--Neutral-Colors-Neutral-60);
+}
+
+.selected {
+  color: var(--Interface-Colors-Orange-50);
+}

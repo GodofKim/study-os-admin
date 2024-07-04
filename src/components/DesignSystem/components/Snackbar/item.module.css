@@ -1,0 +1,72 @@
+.wrapper {
+  transition: transform 0.2s ease-out, opacity ease-out 0.3s;
+  position: absolute;
+
+  min-width: 320px;
+  max-width: 420px;
+  width: max-content;
+
+  border-radius: 8px;
+  pointer-events: all;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  overflow: hidden;
+}
+
+.wrapper.init {
+  opacity: 0;
+}
+
+.wrapper.init::after {
+  transform: translateY(100%);
+}
+
+.wrapper.visible {
+  opacity: 1;
+}
+
+.wrapper.hidden {
+  opacity: 0;
+}
+
+.wrapper::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-out;
+}
+
+.wrapper.default::after {
+  background: var(
+    --Neutral-Colors-Background-Transparent,
+    rgba(34, 34, 34, 0.9)
+  );
+}
+
+.wrapper.negative::after {
+  background: var(--Neutral-Colors-Background-Negative-Transparent);
+}
+
+.content {
+  padding: 12px;
+  flex-grow: 1;
+  display: flex;
+  gap: 6px;
+}
+
+.icon {
+  display: block;
+  min-width: 20px;
+  color: var(--Neutral-Colors-Foreground-on-Neutral-Color);
+}
+
+.message {
+  white-space: pre-wrap;
+}
