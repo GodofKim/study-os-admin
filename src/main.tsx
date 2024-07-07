@@ -8,6 +8,8 @@ import {
   rootStore,
   RootStoreProvider,
 } from "./engine/core/store/stores/RootStore/RootStoreContext.ts";
+import { MantineProvider } from "@mantine/core";
+import "@mantine/core/styles.css";
 
 const usecases: Usecases = {
   // Define your usecases here
@@ -17,7 +19,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <UsecaseProvider usecases={usecases}>
       <RootStoreProvider value={rootStore}>
-        <App />
+        <MantineProvider>
+          <App />
+        </MantineProvider>
       </RootStoreProvider>
     </UsecaseProvider>
   </React.StrictMode>
