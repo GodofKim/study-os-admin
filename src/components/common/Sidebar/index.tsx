@@ -19,35 +19,35 @@ export const Sidebar = observer(() => {
         label="목차"
         icon={<IconBookQuestion />}
         onClick={() => {
-          uiStore.setIsCurrculumPageOpen(true);
+          uiStore.setCurrentPage("curriculum");
         }}
       />
       <NavbarItem
         label="문제"
         icon={<IconQuestionCircle />}
         onClick={() => {
-          uiStore.setIsProblemPageOpen(true);
+          uiStore.setCurrentPage("problem");
         }}
       />
       <NavbarItem
         label="동영상"
         icon={<IconPlayCircle />}
         onClick={() => {
-          uiStore.setIsVideoPageOpen(true);
+          uiStore.setCurrentPage("video");
         }}
       />
       <NavbarItem
         label="아티클"
         icon={<IconPaper />}
         onClick={() => {
-          uiStore.setIsArticlePageOpen(true);
+          uiStore.setCurrentPage("article");
         }}
       />
       <NavbarItem
         label="학습지 설정"
         icon={<IconSetting />}
         onClick={() => {
-          uiStore.setIsBookSettingPageOpen(true);
+          uiStore.setCurrentPage("setting");
         }}
       />
     </Stack>

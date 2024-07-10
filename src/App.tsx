@@ -1,9 +1,10 @@
-import { AppShell } from "@mantine/core";
+import { AppShell, Box, Title } from "@mantine/core";
 import { observer } from "mobx-react-lite";
 import { Sidebar } from "./components/common/Sidebar";
-import { Group, Text } from "./components/DesignSystem/main";
+import { Group } from "./components/DesignSystem/main";
 import LogoImage from "./assets/logo.png";
 import { HomePage } from "./components/pages/HomePage";
+import { SaveButton } from "./components/common/Header/SaveButton";
 
 const App = observer(() => {
   return (
@@ -19,11 +20,14 @@ const App = observer(() => {
           <Group alignItems="center" p={20} style={{ height: 60 }}>
             <img
               src={LogoImage}
-              width={40}
+              width={30}
               style={{ marginRight: 10 }}
               draggable={false}
             />
-            <Text size="title-2">콴다노트 학습지 에디터</Text>
+            <Title order={4}>콴다노트 콘텐츠 메이커</Title>
+            <Box style={{ marginLeft: "auto" }}>
+              <SaveButton />
+            </Box>
           </Group>
         </AppShell.Header>
         <AppShell.Navbar>

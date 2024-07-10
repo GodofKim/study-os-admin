@@ -19,7 +19,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <UsecaseProvider usecases={usecases}>
       <RootStoreProvider value={rootStore}>
-        <MantineProvider>
+        <MantineProvider defaultColorScheme="dark">
           <App />
         </MantineProvider>
       </RootStoreProvider>

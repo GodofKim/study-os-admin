@@ -2,16 +2,17 @@
   padding: 5px 10px;
   border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.15s;
 }
 
 .button:active {
-  background-color: #d8d8d8;
+  background-color: rgba(188, 188, 188, 0.2);
 }
 
 .button:hover {
-  background-color: #e8e8e8;
+  background-color: rgba(186, 186, 186, 0.1);
 }
 
 .active {
-  background-color: #e8e8e8;
+  background-color: rgba(186, 186, 186, 0.2);
 }

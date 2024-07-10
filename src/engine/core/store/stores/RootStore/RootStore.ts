@@ -5,7 +5,7 @@ import { CourseStoreModel } from "../CourseStore";
 export const RootStoreModel = types.model("RootStore", {
   uiStore: types.optional(UIStoreModel, {}),
   courseStore: types.optional(CourseStoreModel, {
-    course: {
+    currentCourse: {
       id: "1",
       title: "Course 1",
       description: "Description 1",
