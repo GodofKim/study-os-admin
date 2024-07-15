@@ -3,8 +3,9 @@ import { Instance, types } from "mobx-state-tree";
 export const UIStoreModel = types
   .model("UIStore", {
     isSidebarOpen: types.optional(types.boolean, false),
-    currentPage: types.optional(types.string, "curriculum"),
+    currentPage: types.optional(types.string, "home"),
 
+    selectedBookId: types.optional(types.string, ""),
     selectedCurriculumNodeValue: types.optional(types.string, ""),
   })
   .actions((self) => ({
@@ -13,6 +14,9 @@ export const UIStoreModel = types
     },
     setCurrentPage(currentPage: string) {
       self.currentPage = currentPage;
+    },
+    setSelectedBookId(selectedBookId: string) {
+      self.selectedBookId = selectedBookId;
     },
     setSelectedCurriculumNodeValue(selectedCurriculumNodeValue: string) {
       self.selectedCurriculumNodeValue = selectedCurriculumNodeValue;

@@ -18,9 +18,11 @@
     "mobx": "^6.12.5",
     "mobx-react-lite": "^4.0.7",
     "mobx-state-tree": "^6.0.0",
+    "nanoid": "^5.0.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-winbox": "^1.5.0"
+    "react-winbox": "^1.5.0",
+    "swr": "^2.2.5"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

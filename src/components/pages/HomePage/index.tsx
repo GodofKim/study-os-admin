@@ -1,17 +1,10 @@
 import { observer } from "mobx-react-lite";
-import "winbox/dist/css/winbox.min.css"; // required
-import { useRootStore } from "../../../hooks/useStore";
-import { CurriculumPage } from "../CurriculumPage";
-import { useEffect } from "react";
-import { useBrowseAway } from "../../../hooks/useBrowseAway";
+import { useBooksForAuthor } from "../../../api/book";
+import { Grid, LoadingOverlay } from "@mantine/core";
+import { BookCard } from "./BookCard";
 
 export const HomePage = observer(() => {
-  const { uiStore } = useRootStore();
-
-  useBrowseAway();
-
-  // load course
-  useEffect(() => {}, []);
+  const { books, isLoading } = useBooksForAuthor();
 
   return (
     <div
@@ -21,7 +14,17 @@ export const HomePage = observer(() => {
         position: "relative",
       }}
     >
-      {uiStore.currentPage === "curriculum" ? <CurriculumPage /> : null}
+      {isLoading ? (
+        <LoadingOverlay />
+      ) : (
+        <Grid>
+          {books?.map((book) => (
+            <Grid.Col span={3}>
+              <BookCard key={book.id} book={book} />
+            </Grid.Col>
+          ))}
+        </Grid>
+      )}
     </div>
   );
 });

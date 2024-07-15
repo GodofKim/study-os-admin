@@ -1,9 +1,11 @@
 import { Instance, types } from "mobx-state-tree";
 import { UIStoreModel } from "../UIStore";
 import { CourseStoreModel } from "../CourseStore";
+import { BookStoreModel } from "../BookStore";
 
 export const RootStoreModel = types.model("RootStore", {
   uiStore: types.optional(UIStoreModel, {}),
+  bookStore: types.optional(BookStoreModel, {}),
   courseStore: types.optional(CourseStoreModel, {
     currentCourse: {
       id: "1",

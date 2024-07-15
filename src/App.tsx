@@ -1,12 +1,26 @@
-import { AppShell, Box, Title } from "@mantine/core";
+import { AppShell, Box, Button, Menu, Title } from "@mantine/core";
 import { observer } from "mobx-react-lite";
 import { Sidebar } from "./components/common/Sidebar";
 import { Group } from "./components/DesignSystem/main";
 import LogoImage from "./assets/logo.png";
 import { HomePage } from "./components/pages/HomePage";
-import { SaveButton } from "./components/common/Header/SaveButton";
+import { useRootStore } from "./hooks/useStore";
+import { MainPage } from "./components/pages/MainPage";
+import { useEffect } from "react";
 
 const App = observer(() => {
+  const { uiStore } = useRootStore();
+
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    const bookId = url.searchParams.get("bookId");
+
+    if (bookId) {
+      uiStore.setCurrentPage("main");
+      uiStore.setSelectedBookId(bookId);
+    }
+  }, [uiStore]);
+
   return (
     <>
       <AppShell
@@ -26,16 +40,48 @@ const App = observer(() => {
             />
             <Title order={4}>콴다노트 콘텐츠 메이커</Title>
             <Box style={{ marginLeft: "auto" }}>
-              <SaveButton />
+              <Menu>
+                <Menu.Target>
+                  <Button variant="transparent" color="gray">
+                    Menu
+                  </Button>
+                </Menu.Target>
+                <Menu.Dropdown>
+                  <Menu.Item
+                    onClick={() => {
+                      uiStore.setCurrentPage("home");
+
+                      // remove bookId query param from url
+                      const url = new URL(window.location.href);
+                      url.searchParams.delete("bookId");
+
+                      window.history.pushState({}, "", url.toString());
+                    }}
+                  >
+                    프로젝트 목록 보기
+                  </Menu.Item>
+                </Menu.Dropdown>
+              </Menu>
             </Box>
+            {/* <Box style={{ marginLeft: "auto" }}>
+              <SaveButton />
+            </Box> */}
           </Group>
         </AppShell.Header>
-        <AppShell.Navbar>
-          <Sidebar />
-        </AppShell.Navbar>
-        <AppShell.Main>
-          <HomePage />
-        </AppShell.Main>
+        {uiStore.currentPage === "home" ? (
+          <Group mt={60} p={20}>
+            <HomePage />
+          </Group>
+        ) : (
+          <>
+            <AppShell.Navbar>
+              <Sidebar />
+            </AppShell.Navbar>
+            <AppShell.Main>
+              <MainPage />
+            </AppShell.Main>
+          </>
+        )}
       </AppShell>
     </>
   );

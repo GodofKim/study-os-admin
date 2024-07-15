@@ -1,16 +1,11 @@
 import { Box, Divider, Group, Text } from "@mantine/core";
 import { observer } from "mobx-react-lite";
 import { useRootStore } from "../../../hooks/useStore";
-
-interface TreeNode {
-  value: string;
-  label: string;
-  children?: TreeNode[];
-}
+import { BookContentNode } from "../../../engine/core/store/models/BookContentNode";
 
 interface Props {
   depth: number;
-  node: TreeNode;
+  node: BookContentNode;
 }
 
 const colorByDepth = [
@@ -27,10 +22,10 @@ export const NodeComponent = observer(({ node, depth }: Props) => {
   const { uiStore } = useRootStore();
   const { selectedCurriculumNodeValue } = uiStore;
 
-  const isActived = selectedCurriculumNodeValue === node.value;
+  const isActived = selectedCurriculumNodeValue === node.id;
 
   const handleClick = () => {
-    uiStore.setSelectedCurriculumNodeValue(node.value);
+    uiStore.setSelectedCurriculumNodeValue(node.id);
   };
 
   return (
@@ -51,7 +46,7 @@ export const NodeComponent = observer(({ node, depth }: Props) => {
           }}
           onClick={handleClick}
         >
-          <Text>{node.label}</Text>
+          <Text>{node.title}</Text>
         </Box>
       </Group>
       {node.children?.map((child) => (
